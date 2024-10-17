@@ -93,6 +93,8 @@ main {
 .hero p {
     font-size: 1.2em;
     margin: 10px 0;
+    max-width: 800px;  /* Begrenzung der Breite des Welcome-Textblocks */
+    text-align: justify; /* Blocksätze für den Welcome-Text */
 }
 
 .btn {
@@ -129,8 +131,17 @@ main {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibles Grid für verschiedene Bildschirmgrößen */
     gap: 40px;
+    max-width: 1200px; /* Maximalbreite der Service-Grid */
+    margin: 0 auto; /* Zentrierung des Grids */
+}
+
+/* Begrenzung auf maximal 3 Blöcke waagerecht */
+@media (min-width: 1200px) {
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr); /* Maximal 3 Blöcke in der Breite */
+    }
 }
 
 .service-item {
