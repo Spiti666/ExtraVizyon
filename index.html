@@ -5,137 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExtraVizyon</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Fester Header, der beim Scrollen sichtbar bleibt -->
     <header class="header">
         <nav>
             <a href="#">Home</a>
-            <a href="#">About Us</a>
             <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#">About Us</a>
+            <!-- Sprachumschalter -->
+            <div class="language-switch">
+                <span id="lang-en" class="lang-switch" onclick="switchLanguage('en')">EN</span> | 
+                <span id="lang-tr" class="lang-switch" onclick="switchLanguage('tr')">TR</span>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero-Bereich mit Logo und Welcome-Text -->
     <section class="hero">
         <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/Logo1.jpg" alt="Extravizyon Logo" />
-        <h2>Welcome</h2>
-        <p>Welcome to ExtraVizyon – your specialist for computers, consoles, and data security! Whether it’s repairing your PC, selling the latest tech, or securing your valuable data, we’re here for you. With passion and expertise, we take care of all your technical needs. Trust us to get your devices back up and running, because your success is our goal!</p>
-        <a href="#" class="btn">About Us</a>
+        <h2 class="lang en">Welcome</h2>
+        <h2 class="lang tr" style="display:none;">Hoşgeldiniz</h2>
+        <p class="lang en">Welcome to ExtraVizyon – your specialist for computers, consoles, and data security! Whether it’s repairing your PC, selling the latest tech, or securing your valuable data, we’re here for you. With passion and expertise, we take care of all your technical needs. Trust us to get your devices back up and running, because your success is our goal!</p>
+        <p class="lang tr" style="display:none;">ExtraVizyon'a hoş geldiniz – bilgisayarlar, konsollar ve veri güvenliği konusunda uzmanınız! İster bilgisayarınızı tamir edelim, ister en son teknolojiyi satalım, ister değerli verilerinizi güvence altına alalım, size yardımcı olmak için buradayız. Tüm teknik ihtiyaçlarınızla tutku ve uzmanlıkla ilgileniyoruz. Cihazlarınızı tekrar çalışır duruma getirmemize güvenin, çünkü başarınız bizim hedefimizdir!</p>
+        <a href="#" class="btn lang en">About Us</a>
+        <a href="#" class="btn lang tr" style="display:none;">Hakkımızda</a>
     </section>
 
-    <!-- Services-Bereich -->
-    <main>
-        <section class="container">
-            <div class="service-block">
-                <h3 class="service-title">Repair – We Get Your Devices Running Again!</h3>
-                <p class="service-description">
-                    Technical issues? No problem for us! Whether it’s a PC, console, or other devices – our technicians will diagnose and fix your hardware or software issues quickly and reliably. Trust us to get your devices back to optimal performance.
-                </p>
-            </div>
+    <!-- Service-Bereich (Beispiel für zweisprachigen Text) -->
+    <section class="container">
+        <div class="service-block">
+            <h3 class="service-title lang en">Repair – We Get Your Devices Running Again!</h3>
+            <h3 class="service-title lang tr" style="display:none;">Tamir – Cihazlarınızı Tekrar Çalışır Hale Getiriyoruz!</h3>
+            <p class="service-description lang en">Technical issues? No problem for us! Whether it’s a PC, console, or other devices – our technicians will diagnose and fix your hardware or software issues quickly and reliably. Trust us to get your devices back to optimal performance.</p>
+            <p class="service-description lang tr" style="display:none;">Teknik sorunlar mı var? Bizim için sorun değil! İster bir PC, ister konsol veya başka bir cihaz olsun – teknisyenlerimiz donanım veya yazılım sorunlarınızı hızlı ve güvenilir bir şekilde teşhis eder ve çözer. Cihazlarınızı tekrar en iyi performansa getireceğimize güvenin.</p>
+        </div>
 
-            <div class="service-block">
-                <h3 class="service-title">Data Backup – Protect What Matters!</h3>
-                <p class="service-description">
-                    Secure your valuable data before it’s too late! Our data backup solutions offer professional protection against loss and damage. Whether for personal or business purposes, we make sure your files are safe and accessible.
-                </p>
-            </div>
+        <div class="service-block">
+            <h3 class="service-title lang en">Data Backup – Protect What Matters!</h3>
+            <h3 class="service-title lang tr" style="display:none;">Veri Yedekleme – Önemli Olanı Koruyun!</h3>
+            <p class="service-description lang en">Secure your valuable data before it’s too late! Our data backup solutions offer professional protection against loss and damage. Whether for personal or business purposes, we make sure your files are safe and accessible.</p>
+            <p class="service-description lang tr" style="display:none;">Değerli verilerinizi çok geç olmadan yedekleyin! Veri yedekleme çözümlerimiz, kayıplara ve hasarlara karşı profesyonel koruma sunar. İster kişisel ister iş amaçlı olsun, dosyalarınızın güvende ve erişilebilir olmasını sağlarız.</p>
+        </div>
 
-            <div class="service-block small-title">
-                <h3 class="service-title">Video – Transferring and Digitizing VHS and Hi8 Tapes</h3>
-                <p class="service-description">
-                    Bring your memories back to life! We digitize your VHS and Hi8 tapes in the highest quality, allowing you to enjoy them on modern devices. Preserve your valuable moments for the future – quickly, safely, and professionally.
-                </p>
-            </div>
+        <div class="service-block">
+            <h3 class="service-title lang en small-title">Video – Transferring and Digitizing VHS and Hi8 Tapes</h3>
+            <h3 class="service-title lang tr small-title" style="display:none;">Video – VHS ve Hi8 Kasetlerinizi Dijitalleştirme</h3>
+            <p class="service-description lang en">Bring your memories back to life! We digitize your VHS and Hi8 tapes in the highest quality, allowing you to enjoy them on modern devices. Preserve your valuable moments for the future – quickly, safely, and professionally.</p>
+            <p class="service-description lang tr" style="display:none;">Anılarınızı canlandırın! VHS ve Hi8 kasetlerinizi en yüksek kalitede dijitalleştiriyoruz, böylece onları modern cihazlarda izleyebilirsiniz. Değerli anılarınızı gelecek için hızlı, güvenli ve profesyonel bir şekilde koruyun.</p>
+        </div>
+    </section>
 
-            <div class="service-block">
-                <h3 class="service-title">Consoles – Gaming at a New Level!</h3>
-                <p class="service-description">
-                    For all gamers out there: We offer repairs and upgrades for Xbox, PlayStation, and Nintendo, as well as the latest devices and games for sale. Our service ensures you can keep playing without interruption!
-                </p>
-            </div>
-
-            <div class="service-block">
-                <h3 class="service-title">PC – Powerful Computers for Every Task!</h3>
-                <p class="service-description">
-                    Whether for gaming, work, or everyday use – we provide customized computer solutions that perfectly match your requirements. Let us advise you in selecting the ideal PC that boosts your productivity and performance.
-                </p>
-            </div>
-
-            <div class="service-block">
-                <h3 class="service-title">Accessories – Everything to Enhance Your Device!</h3>
-                <p class="service-description">
-                    From cables to hard drives to gaming accessories – we have everything you need to improve your technology. Our wide range of accessories ensures you’re equipped for every challenge, and our advice helps you find the best options for your devices.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Neuer Bereich -->
-    <section class="wp-block-group alignfull">
+    <!-- Zusätzliche Artikel-Bereiche -->
+    <div class="wp-block-group alignfull">
         <div class="wp-block-group alignwide">
-            <div class="wp-block-group is-content-justification-center">
-                <h2 class="wp-block-heading has-text-align-center">An array of resources</h2>
-                <p class="has-text-align-center">Trust the experts – We bring your tech back to life!</p>
-            </div>
+            <div class="wp-block-group">
+                <h2 class="wp-block-heading has-text-align-center is-style-asterisk lang en">An array of resources</h2>
+                <h2 class="wp-block-heading has-text-align-center is-style-asterisk lang tr" style="display:none;">Bir dizi kaynak</h2>
 
-            <div class="wp-block-spacer"></div>
-
-            <div class="wp-block-columns alignwide">
-                <div class="wp-block-column" style="flex-basis:40%">
-                    <h3 class="wp-block-heading">We keep the following articles:</h3>
-                    <ul class="wp-block-list">
-                        <li>Cabel</li>
-                        <li>Adapter</li>
-                        <li>Joystick</li>
-                    </ul>
-                </div>
-                <div class="wp-block-column" style="flex-basis:50%">
-                    <figure class="wp-block-image is-style-rounded">
-                        <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/16344812080021182267763061844573.jpg" alt="Image 1" />
-                    </figure>
-                </div>
-            </div>
-
-            <div class="wp-block-spacer"></div>
-
-            <div class="wp-block-columns alignwide">
-                <div class="wp-block-column" style="flex-basis:50%">
-                    <figure class="wp-block-image is-style-rounded">
-                        <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/16344811386393632482564736826623.jpg" alt="Image 2" />
-                    </figure>
-                </div>
-                <div class="wp-block-column" style="flex-basis:40%">
-                    <h3 class="wp-block-heading">Other articles:</h3>
-                    <ul class="wp-block-list">
-                        <li>USB Sticks</li>
-                        <li>USB Harddrive</li>
-                        <li>USB Adapter</li>
-                    </ul>
-                </div>
+                <p class="has-text-align-center lang en">Trust the experts – We bring your tech back to life!</p>
+                <p class="has-text-align-center lang tr" style="display:none;">Uzmanlara güvenin – Teknolojinizi hayata geri getiriyoruz!</p>
             </div>
         </div>
-    </section>
 
-    <section class="wp-block-group alignfull has-background">
-        <div class="wp-block-group">
-            <p class="has-text-align-center" style="line-height:1.2">
-                <em>“Customer service should not be just one department, but the entire company.”</em>
-            </p>
-            <div class="wp-block-spacer"></div>
-            <div class="wp-block-gallery">
-                <figure class="wp-block-image size-thumbnail">
-                    <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/Logo2-150x150.jpg" alt="Logo 2" />
-                </figure>
+        <div class="wp-block-columns">
+            <div class="wp-block-column">
+                <h3 class="wp-block-heading is-style-asterisk lang en">We keep the following articles:</h3>
+                <h3 class="wp-block-heading is-style-asterisk lang tr" style="display:none;">Aşağıdaki ürünleri saklıyoruz:</h3>
+
+                <ul class="wp-block-list">
+                    <li class="lang en">Cable</li>
+                    <li class="lang en">Adapter</li>
+                    <li class="lang en">Joystick</li>
+                    <li class="lang tr" style="display:none;">Kablo</li>
+                    <li class="lang tr" style="display:none;">Adaptör</li>
+                    <li class="lang tr" style="display:none;">Joystick</li>
+                </ul>
             </div>
-            <p class="has-text-align-center">
-                <em><a href="https://de.wikipedia.org/wiki/Tony_Hsieh" target="_blank" rel="noreferrer noopener">Tony Hsieh</a></em>
-            </p>
-            <p class="has-text-align-center">CEO, Zappos</p>
+            <div class="wp-block-column">
+                <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/16344812080021182267763061844573.jpg" alt="Articles" />
+            </div>
         </div>
-    </section>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
