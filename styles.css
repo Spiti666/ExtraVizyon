@@ -3,64 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.service-block {
-    flex: 1;
-    min-width: 280px;
-    margin: 10px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.service-description {
-    font-size: 16px;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-/* Medienabfrage für Tablets */
-@media (max-width: 768px) {
-    .service-title {
-        font-size: 18px;
-    }
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-block {
-        min-width: 90%;
-    }
-}
-
-/* Medienabfrage für Mobilgeräte */
-@media (max-width: 480px) {
-    .service-title {
-        font-size: 16px;
-    }
-    .service-block {
-        min-width: 100%;
-        margin: 0 0 20px 0;
-    }
-}
-
-/* Header bleibt oben sichtbar */
 .header {
     position: fixed;
     top: 0;
@@ -69,12 +14,13 @@ body {
     color: white;
     padding: 10px 0;
     z-index: 1000;
+    text-align: center;
 }
 
 .header nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .header a {
@@ -88,9 +34,62 @@ body {
     border-radius: 5px;
 }
 
-/* Menü für mobile Geräte */
-@media (max-width: 768px) {
-    .header nav {
-        flex-direction: column;
-    }
+/* Willkommensbereich */
+.welcome-section {
+    text-align: center;
+    padding: 120px 20px 40px;
 }
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.welcome-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Service-Bereich */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-block {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+}
+
+.small-title {
+    font-size: 14px;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.6;
