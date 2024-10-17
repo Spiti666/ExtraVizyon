@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autor Name - Offizielle Webseite</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- AOS CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Dein CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Autor Name</a>
+            </div>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="icon-burger">
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#startseite">Startseite</a></li>
+                <li><a href="#buecher">Bücher</a></li>
+                <li><a href="#ueber-mich">Über mich</a></li>
+                <li><a href="#testimonials">Leserstimmen</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Startseite -->
+    <section id="startseite" class="hero-section" data-aos="fade-in">
+        <div class="hero-content">
+            <h1>Willkommen auf meiner Autorenwebseite</h1>
+            <p>Entdecke meine neuesten Bücher und erfahre mehr über meine Schreibreise.</p>
+            <a href="#buecher" class="btn">Meine Bücher</a>
+        </div>
+        <div class="scroll-down">
+            <a href="#buecher"><img src="images/scroll-down.svg" alt="Scroll Down"></a>
+        </div>
+    </section>
+
+    <!-- Bücher -->
+    <section id="buecher" data-aos="fade-up">
+        <h2>Meine Bücher</h2>
+        <div class="book-list">
+            <!-- Buch 1 -->
+            <div class="book-item" data-aos="zoom-in">
+                <img src="images/buch1-cover.jpg" alt="Buch 1 Cover" class="book-cover">
+                <h3>Buchtitel 1</h3>
+                <p>Kurzbeschreibung des Buches.</p>
+                <a href="#" class="btn">Mehr erfahren</a>
+            </div>
+            <!-- Buch 2 -->
+            <div class="book-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/buch2-cover.jpg" alt="Buch 2 Cover" class="book-cover">
+                <h3>Buchtitel 2</h3>
+                <p>Kurzbeschreibung des Buches.</p>
+                <a href="#" class="btn">Mehr erfahren</a>
+            </div>
+            <!-- Weitere Bücher -->
+        </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="ueber-mich" class="parallax-section" data-aos="fade-right">
+        <div class="content">
+            <h2>Über den Autor</h2>
+            <div class="about-me">
+                <img src="images/autor.jpg" alt="Autor Bild" class="author-image">
+                <p>Hier kannst du deine Biografie und Informationen über dich einfügen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section id="testimonials" data-aos="zoom-in">
+        <h2>Leserstimmen</h2>
+        <!-- Slider Hauptcontainer -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <blockquote>
+                        <p>"Dieses Buch hat mein Leben verändert!"</p>
+                        <footer>- Leser 1</footer>
+                    </blockquote>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <blockquote>
+                        <p>"Ein Meisterwerk der modernen Literatur."</p>
+                        <footer>- Leser 2</footer>
+                    </blockquote>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <blockquote>
+                        <p>"Spannend von der ersten bis zur letzten Seite."</p>
+                        <footer>- Leser 3</footer>
+                    </blockquote>
+                </div>
+                <!-- Weitere Slides -->
+            </div>
+            <!-- Navigationspfeile -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" data-aos="fade-left">
+        <h2>Blog</h2>
+        <div class="blog-posts">
+            <!-- Beitrag 1 -->
+            <div class="blog-post" data-aos="fade-up">
+                <h3>Blogbeitrag Titel 1</h3>
+                <p>Einleitung des Blogbeitrags...</p>
+                <a href="#" class="btn">Weiterlesen</a>
+            </div>
+            <!-- Beitrag 2 -->
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="100">
+                <h3>Blogbeitrag Titel 2</h3>
+                <p>Einleitung des Blogbeitrags...</p>
+                <a href="#" class="btn">Weiterlesen</a>
+            </div>
+            <!-- Weitere Beiträge -->
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" data-aos="fade-up">
+        <h2>Kontakt</h2>
+        <form action="#" method="post" id="kontakt-formular">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="nachricht" required></textarea>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit" class="btn">Senden</button>
+        </form>
+    </section>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#startseite" class="scroll-to-top"><img src="images/arrow-up.svg" alt="Nach oben"></a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Autor Name. Alle Rechte vorbehalten.</p>
+        <div class="social-media">
+            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Dein JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // AOS initialisieren
+        AOS.init({
+            duration: 1000, // Dauer der Animation in Millisekunden
+            once: true, // Animation nur einmal abspielen
+        });
+    </script>
+</body>
+</html>
