@@ -245,6 +245,8 @@ h2, h3 {
     flex-wrap: wrap;
     gap: 10px; /* Verringert den Abstand zwischen den Spalten */
     padding: 20px 0; /* Verringert den Abstand oben und unten */
+    max-width: 800px; /* Setzt eine maximale Breite für den Block */
+    margin: 0 auto; /* Zentriert den gesamten Block */
 }
 
 .wp-block-column {
