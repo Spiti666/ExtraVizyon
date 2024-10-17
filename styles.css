@@ -21,31 +21,17 @@ h2, h3 {
     padding: 10px 0;
     text-align: center;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+.header nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.nav-links a.nav-item {
+.header nav a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -53,12 +39,13 @@ h2, h3 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-links a.nav-item:hover {
+.header nav a:hover {
     background-color: #555;
     border-radius: 5px;
 }
 
 .language-switch {
+    margin-left: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -77,25 +64,10 @@ h2, h3 {
     background-color: #555;
 }
 
-/* Hamburger Menü */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
 /* Hero Section */
 .hero {
     background-color: #fff;
-    padding: 120px 20px 40px; /* Anpassung des oberen Padding, um Platz für den fixierten Header zu schaffen */
+    padding: 100px 20px 40px; /* Anpassung des oberen Padding, um Platz für den fixierten Header zu schaffen */
     text-align: center;
     margin-top: 60px; /* Höhe des Headers ausgleichen */
 }
@@ -253,92 +225,9 @@ h2, h3 {
     }
 
     .hero {
-        padding: 120px 20px;
+        padding: 100px 20px 40px; /* Beibehaltung der Anpassung für mobile Geräte */
+        margin-top: 60px; /* Höhe des Headers ausgleichen */
     }
 
     .hero img {
-        max-width: 150px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    /* Anpassungen für Header */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Höhe des Headers */
-        left: 0;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .nav-links a.nav-item {
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .language-switch {
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-/* Footer und abschließende Abschnitte */
-.wp-block-group.has-background {
-    background-color: #333;
-    color: #fff;
-    padding: 60px;
-    text-align: center;
-}
-
-.wp-block-group.has-background .wp-block-gallery img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-.wp-block-group.has-background p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-.wp-block-group.has-background p em {
-    font-size: 24px;
-}
-
-.wp-block-group.has-background a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.wp-block-group.has-background a:hover {
-    color: #ddd;
-}
+        max-width:
