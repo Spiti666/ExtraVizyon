@@ -23,14 +23,29 @@ h2, h3 {
     z-index: 1000;
 }
 
-.header nav {
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.header nav a {
+.nav-links a.nav-item {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -38,13 +53,12 @@ h2, h3 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.header nav a:hover {
+.nav-links a.nav-item:hover {
     background-color: #555;
     border-radius: 5px;
 }
 
 .language-switch {
-    margin-left: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -61,6 +75,21 @@ h2, h3 {
 .lang-switch.active,
 .lang-switch:hover {
     background-color: #555;
+}
+
+/* Hamburger Menü */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -147,35 +176,6 @@ h2, h3 {
     font-size: 22px;
 }
 
-/* Medienabfragen für mobile Geräte */
-@media (max-width: 1024px) {
-    .service-block {
-        flex-basis: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .service-block {
-        flex-basis: 100%;
-    }
-
-    .hero {
-        padding: 120px 20px;
-    }
-
-    .hero img {
-        max-width: 150px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-}
-
 /* Zusätzliche Stile für neue Blöcke */
 .wp-block-group {
     padding: 50px;
@@ -219,36 +219,93 @@ h2, h3 {
     padding: 30px 20px; /* Verringerung des Innenabstands */
 }
 
-.wp-block-columns {
-    gap: 10px; /* Verringert den Abstand zwischen den Spalten */
-    justify-content: center; /* Inhalte zentrieren */
+.wp-block-columns.centered-compact {
+    max-width: 800px; /* Begrenzung der maximalen Breite für bessere Zentrierung */
+    margin: 0 auto; /* Zentriert die Spalten innerhalb des Containers */
+    gap: 10px; /* Weitere Reduzierung des Abstands zwischen den Spalten */
 }
 
-.wp-block-column {
-    flex-basis: 40%; /* Engere Spalten */
-    padding: 15px; /* Weniger Padding */
+.wp-block-columns.centered-compact .wp-block-column {
+    flex-basis: 45%; /* Engere Spalten */
+    padding: 10px; /* Weniger Padding für kompaktere Darstellung */
 }
 
-.wp-block-image img {
-    max-width: 80%; /* Bildgrößenanpassung */
+.wp-block-columns.centered-compact .wp-block-list {
+    padding-left: 10px; /* Reduziertes Padding für Listen */
+}
+
+.wp-block-columns.centered-compact .wp-block-image img {
+    max-width: 100%; /* Anpassung der Bildbreite innerhalb der Spalte */
     height: auto;
-    margin: 0 auto; /* Zentriert das Bild */
+    margin: 0 auto;
 }
 
-.wp-block-list {
-    list-style-position: inside;
-    text-align: left; /* Text linksbündig lassen */
-    margin: 0 auto; /* Zentriert die Liste */
+/* Medienabfragen für mobile Geräte */
+@media (max-width: 1024px) {
+    .service-block {
+        flex-basis: calc(50% - 20px);
+    }
 }
 
-/* Responsive Anpassungen für Artikelsektionen */
 @media (max-width: 768px) {
-    .wp-block-column {
-        flex-basis: 100%; /* Auf kleineren Geräten nehmen die Spalten die gesamte Breite ein */
+    .service-block {
+        flex-basis: 100%;
     }
 
-    .wp-block-image img {
-        max-width: 80%; /* Bilder werden kleiner auf kleinen Bildschirmen */
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero img {
+        max-width: 150px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Anpassungen für Header */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Höhe des Headers */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-links a.nav-item {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .language-switch {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
@@ -284,26 +341,4 @@ h2, h3 {
 
 .wp-block-group.has-background a:hover {
     color: #ddd;
-}
-
-/* Zusätzliche Anpassungen für mittige und kompakte Artikelbereiche */
-.wp-block-columns.centered-compact {
-    max-width: 800px; /* Begrenzung der maximalen Breite für bessere Zentrierung */
-    margin: 0 auto; /* Zentriert die Spalten innerhalb des Containers */
-    gap: 10px; /* Weitere Reduzierung des Abstands zwischen den Spalten */
-}
-
-.wp-block-columns.centered-compact .wp-block-column {
-    flex-basis: 45%; /* Engere Spalten */
-    padding: 10px; /* Weniger Padding für kompaktere Darstellung */
-}
-
-.wp-block-columns.centered-compact .wp-block-list {
-    padding-left: 10px; /* Reduziertes Padding für Listen */
-}
-
-.wp-block-columns.centered-compact .wp-block-image img {
-    max-width: 100%; /* Anpassung der Bildbreite innerhalb der Spalte */
-    height: auto;
-    margin: 0 auto;
 }
