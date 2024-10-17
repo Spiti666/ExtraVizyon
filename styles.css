@@ -138,8 +138,8 @@ main {
 }
 
 /* Spezifische Anpassung für den Block "Video" */
-.service-item.video-service {
-    grid-column: span 3; /* "Video" erstreckt sich über 3 Spalten */
+.service-item.video-service h3 {
+    font-size: 1.1em; /* Kleinere Schriftgröße nur für Überschrift im Video-Service */
 }
 
 .service-item {
@@ -150,26 +150,17 @@ main {
     text-align: justify; /* Blocksatz für den Text */
 }
 
-/* Standardmäßige Zwei-Spalten-Anordnung */
+/* Standardmäßige Schriftgröße für alle anderen Service-Blöcke */
 .service-item h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
     text-align: center; /* Überschriften zentriert */
 }
 
-/* Kleinere Schriftgröße für "Video" Service */
-.service-item.video-service h3 {
-    font-size: 1.1em; /* Kleinere Schriftgröße für Überschrift in 3-Spalten */
-    text-align: center;
-}
-
-/* Begrenzung auf maximal 2 Blöcke waagerecht, außer für Video */
+/* Begrenzung auf maximal 2 Blöcke waagerecht */
 @media (min-width: 1200px) {
     .service-grid {
         grid-template-columns: repeat(2, 1fr); /* Maximal 2 Spalten */
-    }
-    .service-item.video-service {
-        grid-template-columns: repeat(3, 1fr); /* Video erstreckt sich über 3 Spalten */
     }
 }
 
