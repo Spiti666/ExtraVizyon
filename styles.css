@@ -41,6 +41,23 @@ h2, h3 {
     border-radius: 5px;
 }
 
+/* Sprachumschalter */
+.language-switch {
+    display: inline-block;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.lang-switch {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.lang-switch.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* Hero Section */
 .hero {
     background-color: #fff;
@@ -185,35 +202,14 @@ h2, h3 {
     border-radius: 10px;
 }
 
-/* Stile für das Zitat und Logo */
-.wp-block-gallery {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.wp-block-gallery img {
-    border-radius: 50%;
-}
-
-.wp-block-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.wp-block-spacer {
-    height: 40px;
-}
-
-/* Medienabfragen für mobile Geräte (zusätzliche Blöcke) */
+/* Responsive Anpassungen für Artikelsektionen */
 @media (max-width: 768px) {
-    .wp-block-columns {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .wp-block-column {
         flex-basis: 100%;
+    }
+    
+    .wp-block-image img {
+        max-width: 80%;
     }
 }
 
@@ -227,53 +223,4 @@ h2, h3 {
 .wp-block-group.has-background .wp-block-gallery img {
     width: 150px;
     height: 150px;
-}
-
-.wp-block-group.has-background p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-.wp-block-group.has-background p em {
-    font-size: 24px;
-}
-
-/* Anpassungen für die Artikelsektionen */
-.wp-block-columns {
-    display: flex;
-    justify-content: center; /* Zentriert die Inhalte */
-    flex-wrap: wrap;
-    gap: 10px; /* Verringert den Abstand zwischen den Spalten */
-    padding: 20px 0; /* Verringert den Abstand oben und unten */
-    max-width: 800px; /* Setzt eine maximale Breite für den Block */
-    margin: 0 auto; /* Zentriert den gesamten Block */
-}
-
-.wp-block-column {
-    padding: 10px; /* Reduziert die innere Auffüllung */
-    flex-basis: 45%; /* Reduziert die Breite, um kompakter zu sein */
-    box-sizing: border-box;
-}
-
-.wp-block-image img {
-    max-width: 90%; /* Bildgrößenanpassung */
-    height: auto;
-    margin: 0 auto; /* Zentriert das Bild */
-}
-
-.wp-block-list {
-    list-style-position: inside;
-    text-align: left; /* Text linksbündig lassen */
-    margin: 0 auto; /* Zentriert die Liste */
-}
-
-/* Responsive Anpassungen für Artikelsektionen */
-@media (max-width: 768px) {
-    .wp-block-column {
-        flex-basis: 100%; /* Auf kleineren Geräten nehmen die Spalten die gesamte Breite ein */
-    }
-    
-    .wp-block-image img {
-        max-width: 80%; /* Bilder werden kleiner auf kleinen Bildschirmen */
-    }
 }
