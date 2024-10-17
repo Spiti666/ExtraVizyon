@@ -26,6 +26,7 @@ h2, h3 {
 .header nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -34,6 +35,7 @@ h2, h3 {
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .header nav a:hover {
@@ -43,18 +45,30 @@ h2, h3 {
 
 .language-switch {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .lang-switch {
     cursor: pointer;
     color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.lang-switch.active,
+.lang-switch:hover {
+    background-color: #555;
 }
 
 /* Hero Section */
 .hero {
     background-color: #fff;
-    padding: 100px 20px 40px;
+    padding: 120px 20px 40px; /* Anpassung des oberen Padding, um Platz für den fixierten Header zu schaffen */
     text-align: center;
+    margin-top: 60px; /* Höhe des Headers ausgleichen */
 }
 
 .hero img {
@@ -84,6 +98,7 @@ h2, h3 {
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .hero .btn:hover {
@@ -108,11 +123,12 @@ h2, h3 {
     padding: 20px;
     flex-basis: calc(33.333% - 20px);
     box-sizing: border-box;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-block:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .service-title {
@@ -144,7 +160,7 @@ h2, h3 {
     }
 
     .hero {
-        padding: 100px 20px;
+        padding: 120px 20px;
     }
 
     .hero img {
@@ -247,6 +263,9 @@ h2, h3 {
 .wp-block-group.has-background .wp-block-gallery img {
     width: 150px;
     height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .wp-block-group.has-background p {
@@ -256,4 +275,13 @@ h2, h3 {
 
 .wp-block-group.has-background p em {
     font-size: 24px;
+}
+
+.wp-block-group.has-background a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.wp-block-group.has-background a:hover {
+    color: #ddd;
 }
