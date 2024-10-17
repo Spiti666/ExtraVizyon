@@ -9,15 +9,26 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <!-- Sprachumschalter -->
-            <div class="language-switch">
-                <span id="lang-en" class="lang-switch active" onclick="switchLanguage('en')">EN</span> | 
-                <span id="lang-tr" class="lang-switch" onclick="switchLanguage('tr')">TR</span>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">ExtraVizyon</a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="#" class="nav-item lang en">Home</a>
+                <a href="#" class="nav-item lang en">About</a>
+                <a href="#" class="nav-item lang en">Services</a>
+                <a href="#" class="nav-item lang en">Contact</a>
+                <!-- Sprachumschalter -->
+                <div class="language-switch">
+                    <span id="lang-en" class="lang-switch active" onclick="switchLanguage('en')">EN</span> | 
+                    <span id="lang-tr" class="lang-switch" onclick="switchLanguage('tr')">TR</span>
+                </div>
+            </div>
+            <!-- Hamburger Menü -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
