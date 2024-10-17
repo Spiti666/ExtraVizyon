@@ -34,28 +34,43 @@ body {
     border-radius: 5px;
 }
 
-/* Willkommensbereich */
-.welcome-section {
+/* Hero-Bereich */
+.hero {
     text-align: center;
-    padding: 120px 20px 40px;
+    padding: 100px 20px 40px;
+    background-color: #fff;
 }
 
-.welcome-section h1 {
+.hero img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.welcome-section p {
+.hero p {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
 }
 
-.welcome-section img {
-    max-width: 100%;
-    height: auto;
+.hero .btn {
+    display: inline-block;
     margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
 }
 
 /* Service-Bereich */
@@ -93,3 +108,44 @@ body {
     font-size: 16px;
     text-align: justify;
     line-height: 1.6;
+}
+
+/* Medienabfragen für responsives Design */
+@media (max-width: 1024px) {
+    .service-block {
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-block {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero img {
+        max-width: 120px;
+    }
+}
