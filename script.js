@@ -4,7 +4,7 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-// Smooth scrolling
+// Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
@@ -14,15 +14,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Counter (for example, if needed)
-let counter = 0;
-const counterElement = document.querySelector(".counter");
-
-function updateCounter() {
-    if (counter < 100) {
-        counter++;
-        counterElement.innerText = counter;
-    }
-}
-
-setInterval(updateCounter, 100);
+// Optional: Add counters or animations (could be extended further)
