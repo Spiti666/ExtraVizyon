@@ -13,5 +13,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// Optional: Add counters or animations (could be extended further)
