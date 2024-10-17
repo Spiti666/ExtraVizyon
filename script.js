@@ -1,4 +1,4 @@
-// Funktion zur Sprachumschaltung
+// Funktion zum Umschalten der Sprache
 function switchLanguage(language) {
     const englishTexts = document.querySelectorAll('.lang.en');
     const turkishTexts = document.querySelectorAll('.lang.tr');
