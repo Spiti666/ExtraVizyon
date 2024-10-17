@@ -18,6 +18,17 @@ function switchLanguage(language) {
     }
 }
 
+// Funktion zum Umschalten des Hamburger-Menüs
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Event Listener für den Hamburger-Klick
+document.getElementById('hamburger').addEventListener('click', toggleMenu);
+
 // Standardmäßig Englisch aktivieren
 document.addEventListener('DOMContentLoaded', () => {
     switchLanguage('en');
