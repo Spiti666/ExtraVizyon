@@ -24,6 +24,11 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -56,6 +61,11 @@ nav li {
 
 nav a:hover {
     color: #f1c40f;
+}
+
+/* Padding adjustment to avoid content behind header */
+main {
+    padding-top: 100px;
 }
 
 /* Hero Section */
@@ -160,4 +170,8 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
