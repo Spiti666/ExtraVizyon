@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExtraVizyon</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <nav>
             <a href="#">Home</a>
+            <a href="#">About</a>
             <a href="#">Services</a>
-            <a href="#">About Us</a>
+            <a href="#">Contact</a>
             <!-- Sprachumschalter -->
             <div class="language-switch">
                 <span id="lang-en" class="lang-switch" onclick="switchLanguage('en')">EN</span> | 
@@ -21,70 +22,56 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/Logo1.jpg" alt="Extravizyon Logo" />
         <h2 class="lang en">Welcome</h2>
-        <h2 class="lang tr" style="display:none;">Hoşgeldiniz</h2>
-        <p class="lang en">Welcome to ExtraVizyon – your specialist for computers, consoles, and data security! Whether it’s repairing your PC, selling the latest tech, or securing your valuable data, we’re here for you. With passion and expertise, we take care of all your technical needs. Trust us to get your devices back up and running, because your success is our goal!</p>
-        <p class="lang tr" style="display:none;">ExtraVizyon'a hoş geldiniz – bilgisayarlar, konsollar ve veri güvenliği konusunda uzmanınız! İster bilgisayarınızı tamir edelim, ister en son teknolojiyi satalım, ister değerli verilerinizi güvence altına alalım, size yardımcı olmak için buradayız. Tüm teknik ihtiyaçlarınızla tutku ve uzmanlıkla ilgileniyoruz. Cihazlarınızı tekrar çalışır duruma getirmemize güvenin, çünkü başarınız bizim hedefimizdir!</p>
-        <a href="#" class="btn lang en">About Us</a>
-        <a href="#" class="btn lang tr" style="display:none;">Hakkımızda</a>
+        <h2 class="lang tr" style="display: none;">Hoş Geldiniz</h2>
+        <p class="lang en">
+            Welcome to ExtraVizyon – your specialist for computers, consoles, and data security! Whether it’s repairing your PC, selling the latest tech, or securing your valuable data, we’re here for you. With passion and expertise, we take care of all your technical needs. Trust us to get your devices back up and running, because your success is our goal!
+        </p>
+        <p class="lang tr" style="display: none;">
+            ExtraVizyon'a hoş geldiniz - bilgisayarlar, konsollar ve veri güvenliği konusunda uzmanınız! İster PC'nizi tamir etmek, en son teknolojiyi satmak, ister değerli verilerinizi güvence altına almak olsun, sizin için buradayız. Tüm teknik ihtiyaçlarınızı tutku ve uzmanlıkla karşılıyoruz. Başarı sizin için önemli, bizim görevimizdir!
+        </p>
+        <a href="#" class="btn">About Us</a>
     </section>
 
-    <!-- Service-Bereich (Beispiel für zweisprachigen Text) -->
+    <!-- Service Section -->
     <section class="container">
         <div class="service-block">
             <h3 class="service-title lang en">Repair – We Get Your Devices Running Again!</h3>
-            <h3 class="service-title lang tr" style="display:none;">Tamir – Cihazlarınızı Tekrar Çalışır Hale Getiriyoruz!</h3>
-            <p class="service-description lang en">Technical issues? No problem for us! Whether it’s a PC, console, or other devices – our technicians will diagnose and fix your hardware or software issues quickly and reliably. Trust us to get your devices back to optimal performance.</p>
-            <p class="service-description lang tr" style="display:none;">Teknik sorunlar mı var? Bizim için sorun değil! İster bir PC, ister konsol veya başka bir cihaz olsun – teknisyenlerimiz donanım veya yazılım sorunlarınızı hızlı ve güvenilir bir şekilde teşhis eder ve çözer. Cihazlarınızı tekrar en iyi performansa getireceğimize güvenin.</p>
+            <h3 class="service-title lang tr" style="display: none;">Onarım – Cihazlarınızı Yeniden Çalıştırıyoruz!</h3>
+            <p class="service-description lang en">
+                Technical issues? No problem for us! Whether it’s a PC, console, or other devices – our technicians will diagnose and fix your hardware or software issues quickly and reliably.
+            </p>
+            <p class="service-description lang tr" style="display: none;">
+                Teknik sorunlar mı var? Bizim için sorun değil! İster bir PC, ister konsol ya da diğer cihazlar olsun – teknisyenlerimiz donanım veya yazılım sorunlarınızı hızlı ve güvenilir bir şekilde teşhis eder ve düzeltir.
+            </p>
         </div>
 
         <div class="service-block">
             <h3 class="service-title lang en">Data Backup – Protect What Matters!</h3>
-            <h3 class="service-title lang tr" style="display:none;">Veri Yedekleme – Önemli Olanı Koruyun!</h3>
-            <p class="service-description lang en">Secure your valuable data before it’s too late! Our data backup solutions offer professional protection against loss and damage. Whether for personal or business purposes, we make sure your files are safe and accessible.</p>
-            <p class="service-description lang tr" style="display:none;">Değerli verilerinizi çok geç olmadan yedekleyin! Veri yedekleme çözümlerimiz, kayıplara ve hasarlara karşı profesyonel koruma sunar. İster kişisel ister iş amaçlı olsun, dosyalarınızın güvende ve erişilebilir olmasını sağlarız.</p>
+            <h3 class="service-title lang tr" style="display: none;">Veri Yedekleme – Önemli Olanı Koruyun!</h3>
+            <p class="service-description lang en">
+                Secure your valuable data before it’s too late! Our data backup solutions offer professional protection against loss and damage.
+            </p>
+            <p class="service-description lang tr" style="display: none;">
+                Değerli verilerinizi çok geç olmadan güvenceye alın! Veri yedekleme çözümlerimiz, kayıplara ve hasara karşı profesyonel koruma sağlar.
+            </p>
         </div>
 
-        <div class="service-block">
-            <h3 class="service-title lang en small-title">Video – Transferring and Digitizing VHS and Hi8 Tapes</h3>
-            <h3 class="service-title lang tr small-title" style="display:none;">Video – VHS ve Hi8 Kasetlerinizi Dijitalleştirme</h3>
-            <p class="service-description lang en">Bring your memories back to life! We digitize your VHS and Hi8 tapes in the highest quality, allowing you to enjoy them on modern devices. Preserve your valuable moments for the future – quickly, safely, and professionally.</p>
-            <p class="service-description lang tr" style="display:none;">Anılarınızı canlandırın! VHS ve Hi8 kasetlerinizi en yüksek kalitede dijitalleştiriyoruz, böylece onları modern cihazlarda izleyebilirsiniz. Değerli anılarınızı gelecek için hızlı, güvenli ve profesyonel bir şekilde koruyun.</p>
+        <div class="service-block small-title">
+            <h3 class="service-title lang en">Video – Transferring and Digitizing VHS and Hi8 Tapes</h3>
+            <h3 class="service-title lang tr" style="display: none;">Video – VHS ve Hi8 Kasetlerini Dijitalleştirme</h3>
+            <p class="service-description lang en">
+                Bring your memories back to life! We digitize your VHS and Hi8 tapes in the highest quality.
+            </p>
+            <p class="service-description lang tr" style="display: none;">
+                Anılarınızı hayata döndürün! VHS ve Hi8 kasetlerinizi en yüksek kalitede dijitalleştiriyoruz.
+            </p>
         </div>
     </section>
 
-    <!-- Zusätzliche Artikel-Bereiche -->
-    <div class="wp-block-group alignfull">
-        <div class="wp-block-group alignwide">
-            <div class="wp-block-group">
-                <h2 class="wp-block-heading has-text-align-center is-style-asterisk lang en">An array of resources</h2>
-                <h2 class="wp-block-heading has-text-align-center is-style-asterisk lang tr" style="display:none;">Bir dizi kaynak</h2>
-
-                <p class="has-text-align-center lang en">Trust the experts – We bring your tech back to life!</p>
-                <p class="has-text-align-center lang tr" style="display:none;">Uzmanlara güvenin – Teknolojinizi hayata geri getiriyoruz!</p>
-            </div>
-        </div>
-
-        <div class="wp-block-columns">
-            <div class="wp-block-column">
-                <h3 class="wp-block-heading is-style-asterisk lang en">We keep the following articles:</h3>
-                <h3 class="wp-block-heading is-style-asterisk lang tr" style="display:none;">Aşağıdaki ürünleri saklıyoruz:</h3>
-
-                <ul class="wp-block-list">
-                    <li class="lang en">Cable</li>
-                    <li class="lang en">Adapter</li>
-                    <li class="lang en">Joystick</li>
-                    <li class="lang tr" style="display:none;">Kablo</li>
-                    <li class="lang tr" style="display:none;">Adaptör</li>
-                    <li class="lang tr" style="display:none;">Joystick</li>
-                </ul>
-            </div>
-            <div class="wp-block-column">
-                <img src="https://extravizyon.com.tr/test2/wp-content/uploads/2024/10/16344812080021182267763061844573.jpg" alt="Articles" />
-            </div>
-        </div>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
