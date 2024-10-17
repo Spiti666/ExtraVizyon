@@ -246,7 +246,7 @@ h2, h3 {
     .wp-block-column {
         flex-basis: 100%; /* Auf kleineren Geräten nehmen die Spalten die gesamte Breite ein */
     }
-    
+
     .wp-block-image img {
         max-width: 80%; /* Bilder werden kleiner auf kleinen Bildschirmen */
     }
@@ -284,4 +284,26 @@ h2, h3 {
 
 .wp-block-group.has-background a:hover {
     color: #ddd;
+}
+
+/* Zusätzliche Anpassungen für mittige und kompakte Artikelbereiche */
+.wp-block-columns.centered-compact {
+    max-width: 800px; /* Begrenzung der maximalen Breite für bessere Zentrierung */
+    margin: 0 auto; /* Zentriert die Spalten innerhalb des Containers */
+    gap: 10px; /* Weitere Reduzierung des Abstands zwischen den Spalten */
+}
+
+.wp-block-columns.centered-compact .wp-block-column {
+    flex-basis: 45%; /* Engere Spalten */
+    padding: 10px; /* Weniger Padding für kompaktere Darstellung */
+}
+
+.wp-block-columns.centered-compact .wp-block-list {
+    padding-left: 10px; /* Reduziertes Padding für Listen */
+}
+
+.wp-block-columns.centered-compact .wp-block-image img {
+    max-width: 100%; /* Anpassung der Bildbreite innerhalb der Spalte */
+    height: auto;
+    margin: 0 auto;
 }
