@@ -41,28 +41,13 @@ h2, h3 {
     border-radius: 5px;
 }
 
-/* Sprachumschalter Styling */
 .language-switch {
-    display: inline-block;
     margin-left: 20px;
-    color: #fff;
-    font-size: 16px;
+}
+
+.lang-switch {
     cursor: pointer;
-}
-
-.language-switch span {
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-
-.language-switch span:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-.lang-switch.active {
-    font-weight: bold;
-    text-decoration: underline;
+    color: #fff;
 }
 
 /* Hero Section */
@@ -184,19 +169,22 @@ h2, h3 {
 
 .wp-block-columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Zentriert die Inhalte */
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .wp-block-column {
     padding: 20px;
+    flex-basis: 45%;
+    text-align: center;
 }
 
 .wp-block-list {
     list-style-type: disc;
     padding-left: 20px;
     text-align: left;
+    margin: 0 auto;
 }
 
 .wp-block-image {
@@ -204,41 +192,9 @@ h2, h3 {
 }
 
 .wp-block-image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border-radius: 10px;
-}
-
-/* Stile für das Zitat und Logo */
-.wp-block-gallery {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.wp-block-gallery img {
-    border-radius: 50%;
-}
-
-.wp-block-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.wp-block-spacer {
-    height: 40px;
-}
-
-/* Medienabfragen für mobile Geräte (zusätzliche Blöcke) */
-@media (max-width: 768px) {
-    .wp-block-columns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .wp-block-column {
-        flex-basis: 100%;
-    }
+    margin: 0 auto;
 }
 
 /* Footer und abschließende Abschnitte */
@@ -246,6 +202,7 @@ h2, h3 {
     background-color: #333;
     color: #fff;
     padding: 60px;
+    text-align: center;
 }
 
 .wp-block-group.has-background .wp-block-gallery img {
